@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 
 class Footer extends Component {
     constructor(props) {
@@ -11,8 +12,8 @@ class Footer extends Component {
     render() {
         return (
             <footer className="footer">
-                <div><a href="#">{this.props.footerTitle1}</a></div>
-                <div className="footer-on-color"><a href="#">{this.props.footerTitle2}</a></div>
+                <Link to="vol"><div className={this.props.on==0?"footer-on-color":""}>{this.props.footerTitle1}</div></Link>
+                <Link to=""><div className={this.props.on==1?"footer-on-color":""}>{this.props.footerTitle2}</div></Link>
             </footer>
         );
     }

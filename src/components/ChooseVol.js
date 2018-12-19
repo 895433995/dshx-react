@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import swiper from 'swiper';
 
+
 class ChooseVol extends Component {
     constructor(props) {
         super(props);
@@ -113,7 +114,7 @@ class ChooseVol extends Component {
     render(){
         return (
             <div className="wap-body wap-body-1">
-                <Header/>
+                <Header title="我的历史学生"/>
                 {/*填报志愿*/}
                 <div className="vol-content cho-content">
                     <div className="cho-content-head">
@@ -248,7 +249,7 @@ class ChooseVol extends Component {
                 {/*填报志愿结束*/}
 
                 {/*底部*/}
-                <Footer footerTitle1={"我的志愿"} footerTitle2={"填报志愿"}/>
+                <Footer footerTitle1={"我的志愿"} footerTitle2={"填报志愿"} on={1}/>
                 {/*底部结束*/}
                 {/*蒙板*/}
                 <div className="mengban"></div>

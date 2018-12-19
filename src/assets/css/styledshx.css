@@ -576,7 +576,7 @@ input[type="checkbox"]:checked#btn1::after{content: '\2714';background-color: #f
 .footer div{
     text-align: center;
     height: 100%;
-    width: 50%;
+    width: 5rem;
     line-height: 1.307rem;
     font-size: 0.4rem;
     color: black;
@@ -588,10 +588,9 @@ input[type="checkbox"]:checked#btn1::after{content: '\2714';background-color: #f
 
 .footer-on-color{
     background-color: #0087d1;
+    color: white!important;
 }
-.footer-on-color a{
-    color: white;
-}
+
 /*foot结束*/
 .on-color-1{
     color: #40da17;
