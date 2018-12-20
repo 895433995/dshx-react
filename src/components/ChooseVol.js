@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import swiper from 'swiper';
+import axios from 'axios';
 
 
 class ChooseVol extends Component {
@@ -37,11 +38,19 @@ class ChooseVol extends Component {
                 {title:'要求',des:'官网的导师资料已经近十年没有更新（一些新引进导师除外），大家选择导师时除了学长学姐介绍外。'},
                 {title:'已有学生数',des:''},
             ],
-            navActIndex:1
+            navActIndex:1,
+            zhiyuan:null
         })
     }
 
     componentDidMount(){
+        axios.get('http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20')
+            .then(function (response) {
+                console.log(response.data.result);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
         this.changeColor();
 
         var mySwiper = new swiper('.swiper-container', {
@@ -51,6 +60,12 @@ class ChooseVol extends Component {
             loop:false,
             speed:1000,
             slideToClickedSlide:true
+        });
+        mySwiper.on('transitionStart',()=>{
+            this.setState({
+                zhiyuan:mySwiper.activeIndex
+            });
+            console.log(mySwiper.activeIndex)
         })
     }
 

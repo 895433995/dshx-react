@@ -1,14 +1,10 @@
 import * as serviceWorker from './serviceWorker';
 import React from 'react';
+import 'react-flexible';
 import ReactDOM from 'react-dom';
-import './assets/css/swiper-4.3.3.min.css';
-import './assets/css/dshxcommon.css';
-import './assets/css/styledshx.css';
-
-import './assets/js/flexible.debug';
-import './assets/js/flexible_css.debug';
 
 import App from './App';
+
 
 ReactDOM.render(
     <App/>, document.getElementById('root'));
